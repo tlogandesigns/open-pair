@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@realestate.com",
+    "phone": "(555) 123-4567",
+    "license_number": "RE123456",
+    "experience_years": 8,
+    "areas_of_expertise": ["90210", "90211", "90212", "Beverly Hills", "West Hollywood"],
+    "buyer_price_ranges": [
+      {"min": 500000, "max": 2000000},
+      {"min": 2000000, "max": 5000000}
+    ]
+  },
+  {
+    "name": "Michael Chen",
+    "email": "michael.chen@realestate.com",
+    "phone": "(555) 234-5678",
+    "license_number": "RE234567",
+    "experience_years": 5,
+    "areas_of_expertise": ["90401", "90402", "90403", "Santa Monica", "Venice"],
+    "buyer_price_ranges": [
+      {"min": 800000, "max": 3000000}
+    ]
+  },
+  {
+    "name": "Emily Rodriguez",
+    "email": "emily.rodriguez@realestate.com",
+    "phone": "(555) 345-6789",
+    "license_number": "RE345678",
+    "experience_years": 3,
+    "areas_of_expertise": ["90024", "90025", "90064", "Westwood", "Brentwood"],
+    "buyer_price_ranges": [
+      {"min": 400000, "max": 1500000},
+      {"min": 1500000, "max": 4000000}
+    ]
+  },
+  {
+    "name": "David Kim",
+    "email": "david.kim@realestate.com",
+    "phone": "(555) 456-7890",
+    "license_number": "RE456789",
+    "experience_years": 12,
+    "areas_of_expertise": ["90049", "90077", "90210", "Bel Air", "Beverly Hills"],
+    "buyer_price_ranges": [
+      {"min": 1000000, "max": 10000000}
+    ]
+  },
+  {
+    "name": "Jessica Wang",
+    "email": "jessica.wang@realestate.com",
+    "phone": "(555) 567-8901",
+    "license_number": "RE567890",
+    "experience_years": 1,
+    "areas_of_expertise": ["90291", "90292", "Venice", "Marina del Rey"],
+    "buyer_price_ranges": [
+      {"min": 300000, "max": 1200000}
+    ]
+  },
+  {
+    "name": "Robert Thompson",
+    "email": "robert.thompson@realestate.com",
+    "phone": "(555) 678-9012",
+    "license_number": "RE678901",
+    "experience_years": 15,
+    "areas_of_expertise": ["90210", "90211", "90069", "Beverly Hills", "West Hollywood", "Hollywood Hills"],
+    "buyer_price_ranges": [
+      {"min": 800000, "max": 5000000},
+      {"min": 5000000, "max": 20000000}
+    ]
+  },
+  {
+    "name": "Amanda Foster",
+    "email": "amanda.foster@realestate.com",
+    "phone": "(555) 789-0123",
+    "license_number": "RE789012",
+    "experience_years": 6,
+    "areas_of_expertise": ["90403", "90404", "90405", "Santa Monica", "Manhattan Beach"],
+    "buyer_price_ranges": [
+      {"min": 600000, "max": 2500000}
+    ]
+  },
+  {
+    "name": "James Martinez",
+    "email": "james.martinez@realestate.com",
+    "phone": "(555) 890-1234",
+    "license_number": "RE890123",
+    "experience_years": 4,
+    "areas_of_expertise": ["90028", "90046", "90069", "Hollywood", "West Hollywood"],
+    "buyer_price_ranges": [
+      {"min": 450000, "max": 1800000}
+    ]
+  }
+]
