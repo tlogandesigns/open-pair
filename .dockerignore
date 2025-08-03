@@ -1,0 +1,50 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Node modules (handled in multi-stage build)
+frontend/node_modules
+
+# Python cache
+backend/__pycache__
+backend/**/__pycache__
+backend/**/**/__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+backend/venv
+backend/.venv
+backend/env
+backend/.env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Development files
+backend/test
+backend/.pytest_cache
+backend/htmlcov
+backend/.coverage
+
+# Data files (for development only)
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Logs
+*.log
