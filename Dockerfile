@@ -1,15 +1,15 @@
 # Build frontend
 FROM node:18-slim AS ui-build
-WORKDIR /workspace
+WORKDIR /app
 COPY frontend/package*.json frontend/
-WORKDIR /workspace/frontend
+WORKDIR /app/frontend
 RUN npm install --only=production
 COPY frontend/ .
 RUN npm run build
 
 # Build backend
 FROM python:3.11-slim AS api-build
-WORKDIR /workspace
+WORKDIR /app
 COPY backend/requirements.txt backend/
 RUN pip install --no-cache-dir -r backend/requirements.txt
 COPY backend/ backend/
