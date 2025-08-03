@@ -3,7 +3,7 @@ FROM node:18-slim AS ui-build
 WORKDIR /workspace
 COPY frontend/package*.json frontend/
 WORKDIR /workspace/frontend
-RUN npm ci --only=production
+RUN npm install --only=production
 COPY frontend/ .
 RUN npm run build
 
