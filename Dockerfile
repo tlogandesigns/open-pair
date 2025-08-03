@@ -26,5 +26,6 @@ COPY --from=api-build /usr/local/bin/ /usr/local/bin/
 COPY --from=api-build /workspace/backend ./
 COPY --from=ui-build /workspace/frontend/build ./frontend_build
 
+# Final stage configuration
 ENV PORT=8000
-CMD uvicorn main:app --host=0.0.0.0 --port=$PORT
+CMD ["sh", "-c", "uvicorn main:app --host=0.0.0.0 --port=${PORT}"]
