@@ -1,12 +1,13 @@
 # Dockerfile
 
 # 1. Build frontend
-FROM node:18 AS ui
-WORKDIR /app/frontend
-COPY frontend/package.json frontend/package-lock.json ./
-RUN npm ci
+FROM node:18 AS ui-build
+WORKDIR /workspace/frontend
+COPY frontend/package.json ./
+RUN npm install
 COPY frontend/ ./
 RUN npm run build
+
 
 # 2. Install backend
 FROM python:3.11-slim AS api
