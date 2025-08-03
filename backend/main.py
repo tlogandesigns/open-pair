@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from app.api import agents, listings, open_houses, dashboard
 from app.database.connection import engine, create_tables
 from contextlib import asynccontextmanager
+import os
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -17,14 +19,26 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Configure CORS
+# Configure CORS with environment-based origins
+origins = [
+    "http://localhost:3000",
+    "http://localhost:8080",
+]
+
+if os.getenv("ENV") == "production":
+    origins.append("https://your-production-site.com")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:8080"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Serve React frontend if available
+if os.path.isdir("frontend_build"):
+    app.mount("/", StaticFiles(directory="frontend_build", html=True), name="frontend")
 
 # Include API routers
 app.include_router(agents.router, prefix="/api/v1/agents", tags=["agents"])
