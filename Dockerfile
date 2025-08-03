@@ -2,7 +2,7 @@
 FROM node:18 AS ui-build
 WORKDIR /workspace/frontend
 COPY frontend/package.json frontend/package-lock.json ./
-RUN npm install
+RUN npm ci
 COPY frontend/ ./
 RUN npm run build
 
