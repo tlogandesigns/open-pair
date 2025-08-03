@@ -26,7 +26,7 @@ COPY --from=api-build /usr/local/lib/python3.11/site-packages/ /usr/local/lib/py
 COPY --from=api-build /usr/local/bin/ /usr/local/bin/
 
 # Copy application files
-COPY --from=api-build /app/backend ./backend
+COPY --from=api-build /app/backend ./app
 COPY --from=ui-build /app/frontend/build ./frontend_build
 
 # Copy startup script
