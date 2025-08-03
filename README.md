@@ -1,8 +1,5 @@
-Here’s an idea for an AI agent you could build that aligns with your experience and interests:
 
----
-
-## ** Open House Matchmaker**
+## Open House Matchmaker
 
 ### **Problem:**
 
