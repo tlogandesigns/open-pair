@@ -17,6 +17,12 @@ COPY backend/ backend/
 # Final image
 FROM python:3.11-slim
 WORKDIR /workspace
+
+# Copy Python dependencies from build stage
+COPY --from=api-build /usr/local/lib/python3.11/site-packages/ /usr/local/lib/python3.11/site-packages/
+COPY --from=api-build /usr/local/bin/ /usr/local/bin/
+
+# Copy application files
 COPY --from=api-build /workspace/backend ./
 COPY --from=ui-build /workspace/frontend/build ./frontend_build
 
