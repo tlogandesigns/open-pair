@@ -26,21 +26,13 @@ COPY --from=api-build /usr/local/lib/python3.11/site-packages/ /usr/local/lib/py
 COPY --from=api-build /usr/local/bin/ /usr/local/bin/
 
 # Copy application files
-COPY --from=api-build /app/backend ./app
+COPY --from=api-build /app/backend ./
 COPY --from=ui-build /app/frontend/build ./frontend_build
-
-# Copy startup script
-COPY start.sh ./
-RUN chmod +x start.sh
 
 # Set the Python path to include the current directory
 ENV PYTHONPATH="/app"
-ENV PORT=8000
+ENV PORT=8080
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:${PORT}/health || exit 1
-
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
 
 
