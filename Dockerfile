@@ -17,9 +17,9 @@ COPY backend/ ./
 FROM python:3.11-slim
 WORKDIR /workspace
 # Copy backend
-COPY --from=api-build /workspace/backend ./
+COPY --from=api /app/backend ./
 # Copy frontend output
-COPY --from=ui-build /workspace/frontend/build ./frontend_build
+COPY --from=ui /app/frontend/build ./frontend_build
 
 ENV PORT=8000
 CMD uvicorn main:app --host=0.0.0.0 --port=$PORT
