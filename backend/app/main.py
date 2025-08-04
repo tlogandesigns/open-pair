@@ -22,7 +22,7 @@ app = FastAPI(
 # Configure CORS with environment-based origins
 origins = [
     "http://localhost:3000",
-    "http://localhost:8080",
+    "http://localhost:8000",
 ]
 
 if os.getenv("ENV") == "production":
@@ -57,7 +57,7 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
     try:
-        port = int(os.getenv("PORT", "8080"))
+        port = int(os.getenv("PORT", "8000"))
     except ValueError:
-        port = 8080
+        port = 8000
     uvicorn.run("backend.main:app", host="0.0.0.0", port=port)
