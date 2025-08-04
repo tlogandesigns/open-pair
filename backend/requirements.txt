@@ -20,3 +20,4 @@ airtable-python-wrapper==0.15.3
 pytest==7.4.3
 pytest-asyncio==0.21.1
 httpx==0.25.2
+email-validator>=2.0.0post2
