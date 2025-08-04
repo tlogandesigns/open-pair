@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.RAILWAY_PUBLIC_DOMAIN || 'http://localhost:8080/api/v1';
+// const API_BASE_URL = import.meta.env.RAILWAY_PUBLIC_DOMAIN || 'http://localhost:8080/api/v1';
+
+
+const API_BASE_URL ='https://open-pair-production.up.railway.app/'
 
 // Create axios instance with default config
 const api = axios.create({
