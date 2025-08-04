@@ -1,16 +1,14 @@
 import axios from 'axios';
 
-// const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api/v1';
-
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api/v1'; // Uncomment if using React
+const API_BASE_URL = import.meta.env.RAILWAY_PUBLIC_DOMAIN || 'http://localhost:8080/api/v1';
 
 // Create axios instance with default config
-// const api = axios.create({
-//   baseURL: API_BASE_URL,
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-// });
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 
 // Request interceptor for adding auth tokens (if needed)
 api.interceptors.request.use(
