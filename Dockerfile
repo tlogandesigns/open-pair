@@ -31,7 +31,7 @@ COPY --from=ui-build /app/frontend/build ./frontend_build
 
 # Set the Python path to include the current directory
 ENV PYTHONPATH="/app"
-ENV PORT=8000
+ENV PORT=8080
 
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
 
